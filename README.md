@@ -1,5 +1,5 @@
 The pupose this repository is to help people and myself to master the fundamentals of modern react and redux.
-What you'll learn:
+What you'll learn is the following:
 1 Create dynamic web apps using the latest in web technology.
 2 Acquire the programming skills needed to obtain a software engineering job.
 3 Master the fundamentals concepts behind React and Redux.
