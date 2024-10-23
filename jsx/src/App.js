@@ -3,39 +3,41 @@
 // import AlexaImage from "./images/alexa.png";
 // import SiriImage from "./images/siri.png";
 // import CortanaImage from './images/cortana.png';
-import { useState } from "react";
-import AnimalShow from "./AnimalShow";
+// import { useState } from "react";
+// import AnimalShow from "./AnimalShow";
 
-function getRandomAnimal() {
+// function getRandomAnimal() {
   
 
-  const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
+//   const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
 
-  return animals[Math.floor(Math.random() * animals.length)];
-}
+//   return animals[Math.floor(Math.random() * animals.length)];
+// }
 
 //console.log(getRandomAnimal());
 function App() {
 
-  const [animals, setAnimals] = useState([]);
+  return <div>App</div>;
+
+  // const [animals, setAnimals] = useState([]);
   //console.log(useState(0));
   // const [count, setCount] = useState(0);
 
-  const handleClick = () => {
+  // const handleClick = () => {
 
-    setAnimals([...animals, getRandomAnimal()])
+  //   setAnimals([...animals, getRandomAnimal()])
 
-    // console.log('Button was clicked');
-    // setCount(count + 5);
-  };
+  //   // console.log('Button was clicked');
+  //   // setCount(count + 5);
+  // };
 
-  const renderedAnimals  = animals.map((animal, index) => {
-    return <AnimalShow type={animal} key={index}></AnimalShow>
-  });
-  return (
-    <div>
-      <button onClick={handleClick}>Add Animal</button>
-      <div>{renderedAnimals}</div>
+  // const renderedAnimals  = animals.map((animal, index) => {
+  //   return <AnimalShow type={animal} key={index}></AnimalShow>
+  // });
+  // return (
+  //   <div>
+  //     <button onClick={handleClick}>Add Animal</button>
+  //     <div>{renderedAnimals}</div>
       {/* <div>Number of Animals: {count}</div> */}
       {/* <div>
         <section className="hero is-primary">
@@ -79,8 +81,8 @@ function App() {
       {/* <Profilecard title="alexa" handle="@alexa99" imageSrc={AlexaImage}></Profilecard>
             <Profilecard title="alexa" handle="@alexa99"></Profilecard>
             <Profilecard title="alexa" handle="@alexa99"></Profilecard> */}
-    </div>
-  );
+  //   </div>
+  // );
 }
 
 export default App;
