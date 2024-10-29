@@ -1,6 +1,6 @@
-function ImageShow() {
+function ImageShow({image}) {
 
-    return <div> ImageShow</div>;
+    return <div>{image.alt_description}</div>;
 }
 
 export default ImageShow;

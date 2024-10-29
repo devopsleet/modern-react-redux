@@ -3,7 +3,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from './App';
+// import searchImages from "./api";
 
+// searchImages();
 // 2) Get a reference to the div with ID root
 
 const el = document.getElementById("root");

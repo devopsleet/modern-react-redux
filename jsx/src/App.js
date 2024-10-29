@@ -5,9 +5,12 @@
 // import CortanaImage from './images/cortana.png';
 // import { useState } from "react";
 // import AnimalShow from "./AnimalShow";
-
+import {useState} from 'react';
+import searchImages from "./api";
+import ImageList from './components/ImageList'
+import SearchBar from "./components/SearchBar";
+//import searchImages from "./api";
 // function getRandomAnimal() {
-  
 
 //   const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
 
@@ -17,7 +20,21 @@
 //console.log(getRandomAnimal());
 function App() {
 
-  return <div>App</div>;
+  const [images, setImages] = useState([]);
+
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+    setImages(result);
+    //console.log("Do a search with", term);
+    //searchImages
+  };
+
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit}></SearchBar>
+      <ImageList images={images}></ImageList>
+    </div>
+  );
 
   // const [animals, setAnimals] = useState([]);
   //console.log(useState(0));
@@ -38,8 +55,9 @@ function App() {
   //   <div>
   //     <button onClick={handleClick}>Add Animal</button>
   //     <div>{renderedAnimals}</div>
-      {/* <div>Number of Animals: {count}</div> */}
-      {/* <div>
+  //{/* <div>Number of Animals: {count}</div> */}
+  {
+    /* <div>
         <section className="hero is-primary">
             <div className="hero-body">
                 <p className="title">Personal Digital Assistant</p>
@@ -77,10 +95,13 @@ function App() {
             </div>
           </div>
         </section>
-      </div> */}
-      {/* <Profilecard title="alexa" handle="@alexa99" imageSrc={AlexaImage}></Profilecard>
+      </div> */
+  }
+  {
+    /* <Profilecard title="alexa" handle="@alexa99" imageSrc={AlexaImage}></Profilecard>
             <Profilecard title="alexa" handle="@alexa99"></Profilecard>
-            <Profilecard title="alexa" handle="@alexa99"></Profilecard> */}
+            <Profilecard title="alexa" handle="@alexa99"></Profilecard> */
+  }
   //   </div>
   // );
 }
